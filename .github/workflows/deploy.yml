@@ -1,5 +1,5 @@
 # Déploiement automatique vers l'hébergement mutualisé OVHcloud.
-# À chaque push sur main, le site est envoyé par FTPS dans le dossier www/.
+# À chaque push sur main, le site est envoyé par FTP dans le dossier www/.
 # Prérequis : 3 secrets à créer dans GitHub (Settings → Secrets and variables → Actions) :
 #   OVH_FTP_SERVER    → ex. ftp.cluster0XX.hosting.ovh.net
 #   OVH_FTP_USERNAME  → identifiant FTP OVH
@@ -19,13 +19,13 @@ jobs:
       - name: Récupérer le code
         uses: actions/checkout@v4
 
-      - name: Envoyer les fichiers vers OVH (FTPS)
+      - name: Envoyer les fichiers vers OVH (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.OVH_FTP_SERVER }}
           username: ${{ secrets.OVH_FTP_USERNAME }}
           password: ${{ secrets.OVH_FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           server-dir: www/
           exclude: |
             **/.git*
