@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="80%" cy="15%" r="85%">
+      <stop offset="0" stop-color="#4d3f66" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#4d3f66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="15%" cy="88%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur5" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- fenêtre Qt -->
+  <rect x="24" y="22" width="752" height="456" rx="16" fill="#0e1020" stroke="#ece7dd" stroke-opacity=".13" stroke-width="1.5"/>
+  <circle cx="52" cy="43" r="5.5" fill="#e0655f"/>
+  <circle cx="72" cy="43" r="5.5" fill="#e5b458"/>
+  <circle cx="92" cy="43" r="5.5" fill="#67b26a"/>
+  <text x="400" y="47" font-size="12" letter-spacing="1" fill="#ece7dd" opacity=".55" text-anchor="middle">Métro de Paris — plus court chemin</text>
+  <line x1="24" y1="60" x2="776" y2="60" stroke="#ece7dd" stroke-opacity=".1"/>
+
+  <!-- lignes de métro -->
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+    <path d="M64 168 L232 168 L326 214 L536 214" stroke="#e8b84b"/>
+    <path d="M158 96 L158 246 Q158 262 170 274 L236 340 L236 434" stroke="#d383b6"/>
+    <path d="M76 396 L236 340 L392 316 L540 258" stroke="#64a678"/>
+    <path d="M478 96 L410 214 L352 322 L318 434" stroke="#5f8fd0"/>
+  </g>
+
+  <!-- itinéraire optimal (Dijkstra) -->
+  <path d="M64 168 L232 168 L326 214 L410 214 L352 322 L318 434" fill="none" stroke="#c9a0e8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity=".3" filter="url(#blur5)"/>
+  <path d="M64 168 L232 168 L326 214 L410 214 L352 322 L318 434" fill="none" stroke="#c9a0e8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
+  <path d="M64 168 L232 168 L326 214 L410 214 L352 322 L318 434" fill="none" stroke="#f4effa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 14"/>
+
+  <!-- stations -->
+  <g fill="#ece7dd" stroke="#0e1020" stroke-width="3">
+    <circle cx="232" cy="168" r="6"/>
+    <circle cx="326" cy="214" r="6"/>
+    <circle cx="410" cy="214" r="7"/>
+    <circle cx="536" cy="214" r="6"/>
+    <circle cx="158" cy="96" r="6"/>
+    <circle cx="158" cy="246" r="6"/>
+    <circle cx="236" cy="340" r="7"/>
+    <circle cx="236" cy="434" r="6"/>
+    <circle cx="76" cy="396" r="6"/>
+    <circle cx="392" cy="316" r="6"/>
+    <circle cx="540" cy="258" r="6"/>
+    <circle cx="478" cy="96" r="6"/>
+    <circle cx="352" cy="322" r="6"/>
+  </g>
+
+  <!-- départ / arrivée -->
+  <circle cx="64" cy="168" r="10" fill="#c9a0e8" stroke="#ece7dd" stroke-width="3"/>
+  <circle cx="318" cy="434" r="10" fill="#c9a0e8" stroke="#ece7dd" stroke-width="3"/>
+  <g>
+    <rect x="80" y="130" width="92" height="24" rx="12" fill="#c9a0e8" fill-opacity=".14" stroke="#c9a0e8" stroke-opacity=".6"/>
+    <text x="126" y="146" font-size="10.5" letter-spacing="1.5" fill="#e3d2f2" text-anchor="middle">A · DÉPART</text>
+  </g>
+  <g>
+    <rect x="342" y="422" width="98" height="24" rx="12" fill="#c9a0e8" fill-opacity=".14" stroke="#c9a0e8" stroke-opacity=".6"/>
+    <text x="391" y="438" font-size="10.5" letter-spacing="1.5" fill="#e3d2f2" text-anchor="middle">B · ARRIVÉE</text>
+  </g>
+
+  <!-- panneau résultat -->
+  <g>
+    <rect x="584" y="80" width="176" height="372" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="602" y="116" font-size="11.5" letter-spacing="3" fill="#c9a0e8" opacity=".95">DIJKSTRA</text>
+    <text x="602" y="160" font-size="31" font-weight="700" fill="#ece7dd">23 min</text>
+    <line x1="602" y1="182" x2="742" y2="182" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="602" y="212" font-size="12.5" fill="#ece7dd" opacity=".7">9 stations</text>
+    <text x="602" y="240" font-size="12.5" fill="#ece7dd" opacity=".7">1 correspondance</text>
+    <text x="602" y="268" font-size="12.5" fill="#ece7dd" opacity=".7">Ligne 1 → Ligne 13</text>
+    <line x1="602" y1="290" x2="742" y2="290" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="602" y="318" font-size="11" fill="#ece7dd" opacity=".45">Plus court chemin</text>
+    <text x="602" y="336" font-size="11" fill="#ece7dd" opacity=".45">pondéré par le temps</text>
+    <text x="602" y="354" font-size="11" fill="#ece7dd" opacity=".45">de trajet réel.</text>
+    <rect x="600" y="398" width="82" height="26" rx="13" fill="#c9a0e8" fill-opacity=".1" stroke="#c9a0e8" stroke-opacity=".45"/>
+    <text x="641" y="415" font-size="11" letter-spacing="1" fill="#dcc2ea" text-anchor="middle">C++ · Qt</text>
+  </g>
+</svg>

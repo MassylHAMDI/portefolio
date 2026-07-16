@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="18%" cy="14%" r="85%">
+      <stop offset="0" stop-color="#355b80" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#355b80" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="85%" cy="90%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#9fc4de" opacity=".10"/>
+    </pattern>
+    <filter id="blur6" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+  <rect width="800" height="500" fill="url(#dots)"/>
+
+  <!-- titre -->
+  <text x="40" y="54" font-size="14" font-weight="600" letter-spacing="3" fill="#ece7dd" opacity=".85">TÉLÉOPÉRATION HAPTIQUE · VR</text>
+  <rect x="40" y="66" width="34" height="3" rx="1.5" fill="#7fb0d8"/>
+  <g>
+    <rect x="612" y="34" width="148" height="30" rx="15" fill="#7fb0d8" fill-opacity=".10" stroke="#7fb0d8" stroke-opacity=".45"/>
+    <text x="686" y="53" font-size="11.5" letter-spacing="1.5" fill="#bcd6ea" text-anchor="middle">UNITY · REDIS</text>
+  </g>
+
+  <!-- sol -->
+  <line x1="60" y1="408" x2="740" y2="408" stroke="#ece7dd" stroke-opacity=".12" stroke-width="2"/>
+  <ellipse cx="212" cy="410" rx="86" ry="9" fill="#000" opacity=".35"/>
+  <ellipse cx="588" cy="410" rx="86" ry="9" fill="#000" opacity=".25"/>
+
+  <!-- bras robot réel -->
+  <g stroke-linecap="round">
+    <rect x="164" y="386" width="96" height="20" rx="10" fill="#2a2f42" stroke="#525a70" stroke-width="2"/>
+    <path d="M212 380 L258 274" stroke="#dfe3ec" stroke-width="34"/>
+    <path d="M258 274 L334 214" stroke="#cdd3e0" stroke-width="25"/>
+    <path d="M334 214 L352 196" stroke="#b9c1d2" stroke-width="15"/>
+    <path d="M356 192 L372 184" stroke="#9aa3b8" stroke-width="6"/>
+    <path d="M356 196 L374 196" stroke="#9aa3b8" stroke-width="6"/>
+    <circle cx="212" cy="378" r="13" fill="#10131f" stroke="#7fb0d8" stroke-width="3"/>
+    <circle cx="258" cy="274" r="11" fill="#10131f" stroke="#7fb0d8" stroke-width="3"/>
+    <circle cx="334" cy="214" r="8" fill="#10131f" stroke="#7fb0d8" stroke-width="2.5"/>
+  </g>
+  <text x="212" y="446" font-size="11" letter-spacing="2.5" fill="#ece7dd" opacity=".55" text-anchor="middle">ROBOT RÉEL</text>
+
+  <!-- jumeau numérique (hologramme) -->
+  <g stroke-linecap="round">
+    <rect x="540" y="386" width="96" height="20" rx="10" fill="#7fb0d8" fill-opacity=".08" stroke="#7fb0d8" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <g stroke="#7fb0d8" stroke-opacity=".16">
+      <path d="M588 380 L542 274" stroke-width="34"/>
+      <path d="M542 274 L466 214" stroke-width="25"/>
+      <path d="M466 214 L448 196" stroke-width="15"/>
+    </g>
+    <g stroke="#7fb0d8" stroke-width="2" stroke-dasharray="7 5" fill="none" stroke-opacity=".9">
+      <path d="M588 380 L542 274"/>
+      <path d="M542 274 L466 214"/>
+      <path d="M466 214 L448 196"/>
+    </g>
+    <path d="M444 192 L428 184" stroke="#7fb0d8" stroke-width="4" stroke-opacity=".8"/>
+    <path d="M444 196 L426 196" stroke="#7fb0d8" stroke-width="4" stroke-opacity=".8"/>
+    <circle cx="588" cy="378" r="13" fill="none" stroke="#7fb0d8" stroke-width="2" stroke-dasharray="4 4"/>
+    <circle cx="542" cy="274" r="11" fill="none" stroke="#7fb0d8" stroke-width="2" stroke-dasharray="4 4"/>
+    <circle cx="466" cy="214" r="8" fill="none" stroke="#7fb0d8" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+  <text x="588" y="446" font-size="11" letter-spacing="2.5" fill="#9fc4de" opacity=".8" text-anchor="middle">JUMEAU NUMÉRIQUE</text>
+
+  <!-- synchronisation -->
+  <circle cx="400" cy="188" r="16" fill="#7fb0d8" opacity=".45" filter="url(#blur6)"/>
+  <circle cx="400" cy="188" r="5.5" fill="#cfe6f7"/>
+  <path d="M382 172 q18 -12 36 0" stroke="#9fc4de" stroke-width="2.5" fill="none" opacity=".8" stroke-linecap="round"/>
+  <path d="M375 162 q25 -17 50 0" stroke="#9fc4de" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
+  <path d="M382 204 q18 12 36 0" stroke="#9fc4de" stroke-width="2.5" fill="none" opacity=".8" stroke-linecap="round"/>
+  <path d="M375 214 q25 17 50 0" stroke="#9fc4de" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/>
+  <text x="400" y="140" font-size="12" letter-spacing="2.5" fill="#cfe6f7" text-anchor="middle" opacity=".9">SYNC 120 Hz</text>
+  <text x="400" y="252" font-size="10.5" letter-spacing="2" fill="#ece7dd" text-anchor="middle" opacity=".45">RETOUR HAPTIQUE &lt; 5 ms</text>
+
+  <!-- casque VR -->
+  <path d="M374 312 h52 a12 12 0 0 1 12 12 v14 a12 12 0 0 1 -12 12 h-12 q-14 -12 -28 0 h-12 a12 12 0 0 1 -12 -12 v-14 a12 12 0 0 1 12 -12 z"
+        fill="#7fb0d8" fill-opacity=".12" stroke="#9fc4de" stroke-width="2.5"/>
+  <circle cx="388" cy="331" r="4.5" fill="#9fc4de" opacity=".7"/>
+  <circle cx="412" cy="331" r="4.5" fill="#9fc4de" opacity=".7"/>
+</svg>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="50%" cy="10%" r="85%">
+      <stop offset="0" stop-color="#2c6a63" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#2c6a63" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="20%" cy="90%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#6bd6be" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- titre -->
+  <text x="40" y="54" font-size="14" font-weight="600" letter-spacing="3" fill="#ece7dd" opacity=".85">NAVIGATION AUTONOME · SLAM</text>
+  <rect x="40" y="66" width="34" height="3" rx="1.5" fill="#6bd6be"/>
+  <g>
+    <rect x="596" y="34" width="164" height="30" rx="15" fill="#6bd6be" fill-opacity=".08" stroke="#6bd6be" stroke-opacity=".45"/>
+    <text x="678" y="53" font-size="11.5" letter-spacing="1.5" fill="#a9e8d8" text-anchor="middle">LIDAR + CAMÉRA</text>
+  </g>
+
+  <!-- murs (carte d'occupation) -->
+  <g stroke="#cfd8e0" stroke-opacity=".75" stroke-width="5" stroke-linecap="round">
+    <path d="M96 132 L336 132"/>
+    <path d="M96 132 L96 356"/>
+    <path d="M470 96 L704 96"/>
+    <path d="M704 96 L704 244"/>
+    <path d="M540 430 L704 430"/>
+  </g>
+
+  <!-- impacts lidar sur les murs -->
+  <g fill="#6bd6be" opacity=".9">
+    <rect x="118" y="136" width="4" height="4"/>
+    <rect x="160" y="135" width="4" height="4"/>
+    <rect x="204" y="137" width="4" height="4"/>
+    <rect x="248" y="135" width="4" height="4"/>
+    <rect x="292" y="136" width="4" height="4"/>
+    <rect x="99" y="170" width="4" height="4"/>
+    <rect x="100" y="212" width="4" height="4"/>
+    <rect x="99" y="256" width="4" height="4"/>
+    <rect x="100" y="298" width="4" height="4"/>
+    <rect x="99" y="336" width="4" height="4"/>
+    <rect x="510" y="99" width="4" height="4"/>
+    <rect x="560" y="100" width="4" height="4"/>
+    <rect x="612" y="99" width="4" height="4"/>
+    <rect x="664" y="100" width="4" height="4"/>
+    <rect x="699" y="140" width="4" height="4"/>
+    <rect x="700" y="188" width="4" height="4"/>
+    <rect x="699" y="228" width="4" height="4"/>
+    <rect x="580" y="425" width="4" height="4"/>
+    <rect x="636" y="426" width="4" height="4"/>
+  </g>
+
+  <!-- obstacles détectés -->
+  <circle cx="372" cy="296" r="13" fill="#123129" stroke="#6bd6be" stroke-width="2" opacity=".95"/>
+  <circle cx="508" cy="318" r="10" fill="#123129" stroke="#6bd6be" stroke-width="2" opacity=".95"/>
+
+  <!-- rayons lidar -->
+  <g stroke="#6bd6be" stroke-opacity=".3" stroke-width="1.5">
+    <line x1="218" y1="332" x2="98" y2="296"/>
+    <line x1="218" y1="332" x2="98" y2="210"/>
+    <line x1="218" y1="332" x2="124" y2="134"/>
+    <line x1="218" y1="332" x2="206" y2="134"/>
+    <line x1="218" y1="332" x2="294" y2="134"/>
+    <line x1="218" y1="332" x2="360" y2="290"/>
+    <line x1="218" y1="332" x2="498" y2="314"/>
+  </g>
+  <g stroke="#6bd6be" stroke-opacity=".12" stroke-width="1.5">
+    <line x1="218" y1="332" x2="146" y2="430"/>
+    <line x1="218" y1="332" x2="300" y2="446"/>
+  </g>
+  <g fill="#a9e8d8">
+    <circle cx="98" cy="296" r="2.5"/>
+    <circle cx="98" cy="210" r="2.5"/>
+    <circle cx="124" cy="134" r="2.5"/>
+    <circle cx="206" cy="134" r="2.5"/>
+    <circle cx="294" cy="134" r="2.5"/>
+    <circle cx="360" cy="290" r="2.5"/>
+    <circle cx="498" cy="314" r="2.5"/>
+  </g>
+
+  <!-- trajectoire planifiée -->
+  <path d="M218 332 C 300 306 340 268 396 240 S 540 208 622 178" fill="none" stroke="#ece7dd" stroke-width="3" stroke-dasharray="9 9" stroke-linecap="round" opacity=".9"/>
+  <g fill="#ece7dd" opacity=".7">
+    <circle cx="330" cy="272" r="3.5"/>
+    <circle cx="470" cy="222" r="3.5"/>
+    <circle cx="560" cy="198" r="3.5"/>
+  </g>
+
+  <!-- robot -->
+  <circle cx="218" cy="332" r="20" fill="#0f2620" stroke="#6bd6be" stroke-width="3.5"/>
+  <path d="M241 321 L219 325 L227 343 Z" fill="#6bd6be"/>
+  <circle cx="218" cy="332" r="4" fill="#6bd6be"/>
+
+  <!-- objectif -->
+  <circle cx="622" cy="178" r="17" fill="none" stroke="#6bd6be" stroke-width="3"/>
+  <circle cx="622" cy="178" r="6" fill="#6bd6be"/>
+  <rect x="582" y="130" width="96" height="24" rx="12" fill="#6bd6be" fill-opacity=".1" stroke="#6bd6be" stroke-opacity=".5"/>
+  <text x="630" y="146" font-size="10.5" letter-spacing="2" fill="#a9e8d8" text-anchor="middle">OBJECTIF</text>
+
+  <!-- pied de page -->
+  <text x="40" y="464" font-size="10.5" letter-spacing="2" fill="#ece7dd" opacity=".45">CARTE D'OCCUPATION — FUSION CAMÉRA / LIDAR — 20 Hz</text>
+</svg>

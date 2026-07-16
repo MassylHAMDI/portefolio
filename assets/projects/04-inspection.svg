@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="82%" cy="85%" r="85%">
+      <stop offset="0" stop-color="#6b4f3a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#6b4f3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="14%" cy="18%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e5b458" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#e5b458" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#e5b458" stroke-opacity=".12" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- titre -->
+  <text x="40" y="54" font-size="14" font-weight="600" letter-spacing="3" fill="#ece7dd" opacity=".85">INSPECTION VISUELLE · LIGNE PET</text>
+  <rect x="40" y="66" width="34" height="3" rx="1.5" fill="#e5b458"/>
+  <g>
+    <rect x="584" y="34" width="176" height="30" rx="15" fill="#e5b458" fill-opacity=".08" stroke="#e5b458" stroke-opacity=".45"/>
+    <text x="672" y="53" font-size="11.5" letter-spacing="1.5" fill="#f0d29a" text-anchor="middle">ONNX · CUDA · 60 i/s</text>
+  </g>
+
+  <!-- caméra + faisceau -->
+  <line x1="400" y1="22" x2="400" y2="56" stroke="#ece7dd" stroke-opacity=".3" stroke-width="3"/>
+  <rect x="366" y="56" width="68" height="36" rx="9" fill="#1d1f30" stroke="#ece7dd" stroke-opacity=".35" stroke-width="2"/>
+  <circle cx="400" cy="100" r="9" fill="#0a0b15" stroke="#e5b458" stroke-width="2.5"/>
+  <circle cx="400" cy="100" r="3.5" fill="#e5b458" opacity=".85"/>
+  <polygon points="388,108 412,108 486,330 314,330" fill="url(#beam)"/>
+
+  <!-- convoyeur -->
+  <rect x="56" y="332" width="688" height="40" rx="7" fill="#191216" stroke="#ece7dd" stroke-opacity=".14"/>
+  <rect x="56" y="332" width="688" height="40" rx="7" fill="url(#hatch)"/>
+  <g fill="#0d0e18" stroke="#ece7dd" stroke-opacity=".22" stroke-width="2">
+    <circle cx="110" cy="390" r="9"/>
+    <circle cx="210" cy="390" r="9"/>
+    <circle cx="310" cy="390" r="9"/>
+    <circle cx="410" cy="390" r="9"/>
+    <circle cx="510" cy="390" r="9"/>
+    <circle cx="610" cy="390" r="9"/>
+    <circle cx="700" cy="390" r="9"/>
+  </g>
+  <g stroke="#e5b458" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M84 344 l9 8 l-9 8"/>
+    <path d="M100 344 l9 8 l-9 8"/>
+    <path d="M116 344 l9 8 l-9 8"/>
+  </g>
+
+  <!-- bouteille OK (gauche) -->
+  <g>
+    <rect x="171" y="168" width="18" height="12" rx="3" fill="#9aa3b8" opacity=".9"/>
+    <path d="M171 180 v10 C171 202 154 206 154 232 V314 Q154 330 168 330 H192 Q206 330 206 314 V232 C206 206 189 202 189 190 V180 Z"
+          fill="#dfe9f2" fill-opacity=".08" stroke="#d9dfe8" stroke-width="2.5"/>
+    <line x1="160" y1="250" x2="200" y2="250" stroke="#d9dfe8" stroke-opacity=".25" stroke-width="2"/>
+    <line x1="160" y1="262" x2="200" y2="262" stroke="#d9dfe8" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M164 236 V306" stroke="#fff" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="#7dc9a1" stroke-width="2.5" stroke-opacity=".75" fill="none">
+      <path d="M140 172 v-14 h14"/>
+      <path d="M206 158 h14 v14"/>
+      <path d="M220 330 v14 h-14"/>
+      <path d="M154 344 h-14 v-14"/>
+    </g>
+    <rect x="136" y="120" width="88" height="24" rx="12" fill="#7dc9a1" fill-opacity=".1" stroke="#7dc9a1" stroke-opacity=".6"/>
+    <text x="180" y="136" font-size="11" letter-spacing="1" fill="#a9dfc3" text-anchor="middle">OK · 0,99</text>
+  </g>
+
+  <!-- bouteille défectueuse (centre) -->
+  <g>
+    <rect x="391" y="168" width="18" height="12" rx="3" fill="#9aa3b8" opacity=".9"/>
+    <path d="M391 180 v10 C391 202 374 206 374 232 L374 258 L385 270 L374 282 V314 Q374 330 388 330 H412 Q426 330 426 314 V232 C426 206 409 202 409 190 V180 Z"
+          fill="#dfe9f2" fill-opacity=".08" stroke="#d9dfe8" stroke-width="2.5"/>
+    <line x1="380" y1="250" x2="420" y2="250" stroke="#d9dfe8" stroke-opacity=".25" stroke-width="2"/>
+    <line x1="380" y1="262" x2="420" y2="262" stroke="#d9dfe8" stroke-opacity=".25" stroke-width="2"/>
+    <circle cx="380" cy="270" r="10" fill="#e06c5f" opacity=".22"/>
+    <circle cx="380" cy="270" r="4.5" fill="#e06c5f"/>
+    <rect x="354" y="152" width="92" height="196" fill="none" stroke="#e06c5f" stroke-width="3" stroke-dasharray="9 6"/>
+    <rect x="336" y="112" width="128" height="26" rx="13" fill="#e06c5f" fill-opacity=".14" stroke="#e06c5f"/>
+    <text x="400" y="129" font-size="11.5" letter-spacing="1" fill="#f2a79c" text-anchor="middle">ANOMALIE · 0,97</text>
+  </g>
+
+  <!-- bouteille OK (droite) -->
+  <g>
+    <rect x="611" y="168" width="18" height="12" rx="3" fill="#9aa3b8" opacity=".9"/>
+    <path d="M611 180 v10 C611 202 594 206 594 232 V314 Q594 330 608 330 H632 Q646 330 646 314 V232 C646 206 629 202 629 190 V180 Z"
+          fill="#dfe9f2" fill-opacity=".08" stroke="#d9dfe8" stroke-width="2.5"/>
+    <line x1="600" y1="250" x2="640" y2="250" stroke="#d9dfe8" stroke-opacity=".25" stroke-width="2"/>
+    <line x1="600" y1="262" x2="640" y2="262" stroke="#d9dfe8" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M604 236 V306" stroke="#fff" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="#7dc9a1" stroke-width="2.5" stroke-opacity=".75" fill="none">
+      <path d="M580 172 v-14 h14"/>
+      <path d="M646 158 h14 v14"/>
+      <path d="M660 330 v14 h-14"/>
+      <path d="M594 344 h-14 v-14"/>
+    </g>
+    <rect x="576" y="120" width="88" height="24" rx="12" fill="#7dc9a1" fill-opacity=".1" stroke="#7dc9a1" stroke-opacity=".6"/>
+    <text x="620" y="136" font-size="11" letter-spacing="1" fill="#a9dfc3" text-anchor="middle">OK · 0,99</text>
+  </g>
+
+  <!-- pied de page -->
+  <text x="56" y="462" font-size="10.5" letter-spacing="2" fill="#ece7dd" opacity=".45">DÉFAUT PAROI DÉTECTÉ — ÉJECTION AUTOMATIQUE</text>
+</svg>

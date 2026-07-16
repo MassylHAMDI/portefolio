@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr" data-anim="onde">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Massyl Yanis Hamdi — Ingénieur C/C++</title>
+<meta name="description" content="Portfolio de Massyl Yanis Hamdi, ingénieur C/C++ diplômé en Systèmes Intelligents de Sorbonne Université — systèmes embarqués, robotique et vision par ordinateur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- police chargée sans bloquer le rendu : bascule en 'all' une fois prête -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="topbar" id="topbar" aria-label="Navigation flottante">
+  <a class="brand" href="#stage">Massyl Hamdi</a>
+  <div class="topbar-links">
+    <a href="#about">À propos</a>
+    <a href="#stack">Stack</a>
+    <a href="#work">Projets</a>
+    <a href="#parcours">Parcours</a>
+  </div>
+  <a class="topbar-cta" href="#contact">Contact</a>
+</nav>
+
+<div id="stage">
+
+  <canvas id="water"></canvas>
+
+  <div id="loader">
+    <div id="loader-text"></div>
+  </div>
+
+  <div id="dot"></div>
+  <div id="ring"></div>
+  <div id="reveal"></div>
+  <div class="curtain" id="curtain1" aria-hidden="true"></div>
+  <div class="curtain" id="curtain2" aria-hidden="true"></div>
+
+  <div id="hero">
+    <nav>
+      <a class="book-btn" href="#contact">ME CONTACTER</a>
+      <div class="nav-links">
+        <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/massyl-yanis-hamdi-7bb359217/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+
+    <div class="hero-mid">
+      <div class="hero-name">
+        <h1>Massyl<br>Hamdi</h1>
+        <svg class="name-wave" viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0 6 Q12 1 24 6 T48 6 T72 6 T96 6 T120 6 T144 6 T168 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <p class="hero-role">Ingénieur C/C++ · Systèmes embarqués · Vision par ordinateur</p>
+      </div>
+      <div class="avatar">
+        <span class="avatar-status"><i></i>Disponible</span>
+        <img src="assets/portrait.jpg" alt="Portrait de Massyl Yanis Hamdi" loading="eager">
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <p>Ingénieur en Systèmes Intelligents diplômé de <a href="https://www.sorbonne-universite.fr" target="_blank" rel="noopener">Sorbonne Université</a>, disponible immédiatement.</p>
+      <p>Spécialisé en C/C++, systèmes embarqués et vision par ordinateur, basé à Paris.</p>
+    </div>
+
+    <div class="scroll-cue">Scroll</div>
+  </div>
+
+</div>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<main>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="wrap about-layout">
+      <div class="about-main">
+        <span class="eyebrow reveal">À propos</span>
+        <h2 class="statement reveal">Concevoir des systèmes <em>fiables</em>, des spécifications à la validation, sans rien laisser au <em>hasard</em>.</h2>
+        <div class="about-copy">
+          <div>
+            <p class="reveal">Ingénieur diplômé en Systèmes Intelligents de Sorbonne Université, je me spécialise dans le développement C/C++ sur Linux et en environnements temps réel, en maîtrisant l'ensemble du cycle de développement logiciel.</p>
+            <p class="reveal">Que je code un module embarqué ou une interface Qt, je cherche toujours <strong>le détail qui change tout</strong> — l'architecture propre, le test qui rassure, la milliseconde gagnée.</p>
+          </div>
+          <div>
+            <p class="reveal">En dehors du code, je reste curieux : robotique, réalité virtuelle, vision par ordinateur — autant de terrains où j'aime expérimenter de nouvelles approches.</p>
+            <p class="reveal">Rigoureux, autonome et proactif, je cherche un environnement technique stimulant où continuer à progresser. Permis B, disponible immédiatement.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="about-portrait reveal">
+        <div class="frame">
+          <img src="assets/portrait.jpg" alt="Portrait" loading="lazy">
+          <figcaption>
+            <b>Massyl Yanis Hamdi</b>
+            <span>Ingénieur C/C++ · Paris</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== STACK ===================== -->
+  <section class="stack" id="stack">
+    <div class="wrap">
+      <span class="eyebrow reveal">Stack technique</span>
+      <p class="stack-intro reveal">Un socle C/C++ orienté systèmes embarqués, Python pour la vision par ordinateur, et l'outillage pour livrer proprement — du test unitaire à l'intégration.</p>
+      <div class="stack-grid">
+        <div class="stack-group reveal">
+          <div class="stack-head">
+            <span class="stack-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 6 3 12l5.5 6M15.5 6 21 12l-5.5 6"/></svg>
+            </span>
+            <h4>Langages</h4>
+          </div>
+          <p class="stack-sub">C et C++ au cœur du métier, Python pour prototyper vite.</p>
+          <ul>
+            <li class="lead">C</li><li class="lead">C++</li><li>Python</li><li>QML</li><li>SQL</li><li>Bash</li>
+          </ul>
+        </div>
+        <div class="stack-group reveal">
+          <div class="stack-head">
+            <span class="stack-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7.5" y="7.5" width="9" height="9" rx="1.8"/><path d="M10 7.5v-3M14 7.5v-3M10 19.5v-3M14 19.5v-3M7.5 10h-3M7.5 14h-3M19.5 10h-3M19.5 14h-3"/></svg>
+            </span>
+            <h4>Systèmes & Embarqué</h4>
+          </div>
+          <p class="stack-sub">À l'aise sur Linux et en temps réel, du Raspberry Pi au Jetson.</p>
+          <ul>
+            <li class="lead">Linux</li><li>Raspberry Pi</li><li>NVIDIA Jetson</li><li>ROS</li><li>Temps réel</li><li>Windows</li>
+          </ul>
+        </div>
+        <div class="stack-group reveal">
+          <div class="stack-head">
+            <span class="stack-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h8M16.8 7H20M4 17h3.2M11.8 17H20"/><circle cx="14.4" cy="7" r="2.4"/><circle cx="9.4" cy="17" r="2.4"/></svg>
+            </span>
+            <h4>Outils & Méthodes</h4>
+          </div>
+          <p class="stack-sub">Du build à la validation : industrialiser le développement.</p>
+          <ul>
+            <li class="lead">Qt (Widgets & QML)</li><li>OpenCV</li><li>Git / GitLab</li><li>CMake</li><li>Docker</li><li>Google Test</li><li>Agile / Scrum</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <span class="eyebrow reveal">Mes projets</span>
+      <p class="work-intro reveal">De la robotique à la vision par ordinateur, en passant par les interfaces Qt — chaque projet ici répond à un vrai problème technique, du prototype à la validation.</p>
+
+      <div class="work-stack">
+
+        <article class="project-card" data-thumb="assets/projects/01-robot-vr.svg">
+          <div class="project-thumb">
+            <span class="project-no">01</span>
+          </div>
+          <div class="project-body">
+            <div class="project-links">
+              <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener" aria-label="Voir sur GitHub">↗</a>
+            </div>
+            <h3>Robotique haptique en réalité virtuelle</h3>
+            <p>Intégration d'un bras robotique Franka avec Unity/VR : synchronisation temps réel entre le robot et son jumeau numérique, retour haptique haute précision et contrôle via une interface web reliée par Redis.</p>
+            <div class="project-tags"><span>Unity / C#</span><span>Python</span><span>Redis</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-thumb="assets/projects/02-metro.svg">
+          <div class="project-thumb">
+            <span class="project-no">02</span>
+          </div>
+          <div class="project-body">
+            <div class="project-links">
+              <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener" aria-label="Voir sur GitHub">↗</a>
+            </div>
+            <h3>Itinéraires optimaux dans le métro parisien</h3>
+            <p>Application C++ avec interface graphique Qt pour estimer les itinéraires optimaux dans le métro parisien, basée sur l'algorithme de Dijkstra pour le calcul des plus courts chemins entre stations.</p>
+            <div class="project-tags"><span>C++ (POO)</span><span>Qt</span><span>Dijkstra</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-thumb="assets/projects/03-navigation.svg">
+          <div class="project-thumb">
+            <span class="project-no">03</span>
+          </div>
+          <div class="project-body">
+            <div class="project-links">
+              <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener" aria-label="Voir sur GitHub">↗</a>
+            </div>
+            <h3>Navigation autonome pour robot mobile</h3>
+            <p>Système de navigation autonome basé sur la vision : détection d'obstacles en temps réel avec OpenCV, fusion caméra/Lidar pour la localisation, déployé sur Turtlebot 3 en simulation (Gazebo/RViz) et en conditions réelles.</p>
+            <div class="project-tags"><span>ROS</span><span>OpenCV</span><span>Python / C++</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-thumb="assets/projects/04-inspection.svg">
+          <div class="project-thumb">
+            <span class="project-no">04</span>
+          </div>
+          <div class="project-body">
+            <div class="project-links">
+              <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener" aria-label="Voir sur GitHub">↗</a>
+            </div>
+            <h3>Inspection visuelle par deep learning</h3>
+            <p>Détection d'anomalies sur bouteilles PET en production (stage SIDEL) : conception du système d'acquisition, création du dataset, benchmark d'architectures et optimisation de l'inférence pour le traitement vidéo temps réel.</p>
+            <div class="project-tags"><span>PyTorch</span><span>OpenCV</span><span>ONNX / CUDA</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-thumb="assets/projects/05-tracking.svg">
+          <div class="project-thumb">
+            <span class="project-no">05</span>
+          </div>
+          <div class="project-body">
+            <div class="project-links">
+              <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener" aria-label="Voir sur GitHub">↗</a>
+            </div>
+            <h3>Tracking &amp; vision bio-inspirée</h3>
+            <p>Comparaison d'approches de suivi de mouvement (Kalman, filtre particulaire, optical flow, modèles bio-inspirés) chez AnotherBrain, avec modélisation par graphes dynamiques et interface d'évaluation développée sous PyQt.</p>
+            <div class="project-tags"><span>Python</span><span>Jax</span><span>PyQt</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-thumb="assets/projects/06-foodvision.svg">
+          <div class="project-thumb">
+            <span class="project-no">06</span>
+          </div>
+          <div class="project-body">
+            <div class="project-links">
+              <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener" aria-label="Voir sur GitHub">↗</a>
+            </div>
+            <h3>FoodVision — classification d'images</h3>
+            <p>Application de vision par ordinateur pour la classification d'images de plats : transfer learning avec des modèles pré-entraînés (ResNet, EfficientNet) et interface web interactive déployée via Streamlit.</p>
+            <div class="project-tags"><span>PyTorch</span><span>Streamlit</span><span>Transfer Learning</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider dim" aria-hidden="true"></div>
+
+  <!-- ===================== PROMO ===================== -->
+  <section class="promo">
+    <div class="wrap">
+      <h3 class="reveal">Disponible immédiatement.</h3>
+      <div class="promo-side reveal">
+        <p>Un poste, une mission ou un projet en C/C++, systèmes embarqués ou vision par ordinateur ? Discutons-en.</p>
+        <a class="btn-solid" href="#contact">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="parcours">
+    <div class="wrap">
+      <span class="eyebrow reveal">Parcours</span>
+      <div class="testi-grid">
+
+        <div class="testi-card reveal">
+          <p class="testi-text">Comparaison d'approches de tracking (Kalman, filtre particulaire, optical flow, modèles bio-inspirés), modélisation par graphes dynamiques et développement d'une interface d'évaluation sous PyQt.</p>
+          <div class="testi-name">Stagiaire Ingénieur R&amp;D — IA &amp; Computer Vision</div>
+          <div class="testi-role">AnotherBrain, Paris · Février – Août 2024</div>
+        </div>
+
+        <div class="testi-card reveal">
+          <p class="testi-text">Détection d'anomalies par deep learning pour l'inspection visuelle de bouteilles PET : conception du système d'acquisition, création du dataset, benchmark d'architectures et validation sur ligne de production.</p>
+          <div class="testi-name">Stagiaire Ingénieur — Vision Industrielle</div>
+          <div class="testi-role">SIDEL, Le Havre · Avril – Août 2023</div>
+        </div>
+
+        <div class="testi-card reveal">
+          <p class="testi-text">Robotique, IA, traitement des images et du son, programmation objet — complété par la formation Compétences complémentaires en informatique d'Aix-Marseille Université (2024 – 2025).</p>
+          <div class="testi-name">Master Automatique et Robotique — Ingénierie des Systèmes Intelligents</div>
+          <div class="testi-role">Sorbonne Université, Paris · 2021 – 2024</div>
+        </div>
+
+        <div class="testi-card reveal">
+          <p class="testi-text">Un socle solide en électronique, énergie et automatique : capteurs, asservissements, systèmes — les fondations côté matériel de mon profil d'ingénieur systèmes embarqués.</p>
+          <div class="testi-name">Licence 3 EEA &amp; Licence Automatique</div>
+          <div class="testi-role">Université de Lille · 2020 – 2021 — Univ. Mouloud Mammeri · 2017 – 2020</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Discutons.</h2>
+    <p class="lead reveal">Une question, un projet, une opportunité ? J'y réponds avec plaisir.</p>
+    <div class="cta-row reveal">
+      <a class="btn-primary" href="mailto:hmassylyanis@gmail.com">Envoyer un email</a>
+      <a class="btn-secondary" href="tel:+33695134701">06 95 13 47 01</a>
+    </div>
+    <div class="contact-links reveal">
+      <a href="https://www.linkedin.com/in/massyl-yanis-hamdi-7bb359217/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/MassylHAMDI" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Massyl Yanis Hamdi. Tous droits réservés.</span>
+    <span>Un projet en C/C++, embarqué ou vision ? <a href="mailto:hmassylyanis@gmail.com">Écrivez-moi</a>.</span>
+  </div>
+</footer>
+
+<!-- <div class="anim-switch" id="animSwitch" role="group" aria-label="Profil d'animation">
+  <span class="label">Animations</span>
+  <button type="button" data-anim-profile="onde" aria-pressed="true">Onde</button>
+  <button type="button" data-anim-profile="souffle" aria-pressed="false">Souffle</button>
+</div> -->
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Passer en mode clair" aria-pressed="false">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="12" cy="12" r="4.2"></circle>
+    <line x1="12" y1="2.5" x2="12" y2="5.2"></line>
+    <line x1="12" y1="18.8" x2="12" y2="21.5"></line>
+    <line x1="2.5" y1="12" x2="5.2" y2="12"></line>
+    <line x1="18.8" y1="12" x2="21.5" y2="12"></line>
+    <line x1="5.1" y1="5.1" x2="7" y2="7"></line>
+    <line x1="17" y1="17" x2="18.9" y2="18.9"></line>
+    <line x1="18.9" y1="5.1" x2="17" y2="7"></line>
+    <line x1="7" y1="17" x2="5.1" y2="18.9"></line>
+  </svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.5 14.7c-.9.3-1.8.5-2.8.5-5 0-9-4-9-9 0-1.9.6-3.7 1.6-5.2-4 .9-7 4.5-7 8.8 0 5 4 9 9 9 4 0 7.4-2.6 8.6-6.3-.1.1-.3.1-.4.2z"></path>
+  </svg>
+</button>
+
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

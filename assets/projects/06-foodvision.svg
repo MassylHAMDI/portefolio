@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="72%" cy="20%" r="85%">
+      <stop offset="0" stop-color="#5a4368" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#5a4368" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="14%" cy="90%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8f6bb8"/>
+      <stop offset="1" stop-color="#c9a0dc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- en-tête -->
+  <circle cx="52" cy="52" r="13" fill="#e2a94f" stroke="#b5762f" stroke-width="2"/>
+  <line x1="43" y1="43" x2="61" y2="61" stroke="#b5762f" stroke-width="1.5" opacity=".7"/>
+  <line x1="61" y1="43" x2="43" y2="61" stroke="#b5762f" stroke-width="1.5" opacity=".7"/>
+  <circle cx="48" cy="49" r="2" fill="#c05a4a"/>
+  <circle cx="57" cy="55" r="2" fill="#c05a4a"/>
+  <text x="76" y="59" font-size="21" font-weight="700" fill="#ece7dd">FoodVision</text>
+  <g>
+    <rect x="574" y="34" width="186" height="30" rx="15" fill="#c9a0dc" fill-opacity=".1" stroke="#c9a0dc" stroke-opacity=".45"/>
+    <text x="667" y="53" font-size="11.5" letter-spacing="1.5" fill="#dcc2ea" text-anchor="middle">TRANSFER LEARNING</text>
+  </g>
+
+  <!-- carte image -->
+  <rect x="44" y="96" width="340" height="336" rx="16" fill="#ece7dd" fill-opacity=".05" stroke="#ece7dd" stroke-opacity=".12"/>
+  <ellipse cx="214" cy="372" rx="100" ry="12" fill="#000" opacity=".25"/>
+  <circle cx="214" cy="256" r="110" fill="#ebe6dc"/>
+  <circle cx="214" cy="256" r="88" fill="none" stroke="#000" stroke-opacity=".09" stroke-width="3"/>
+  <circle cx="214" cy="254" r="78" fill="#d99a43"/>
+  <circle cx="214" cy="254" r="64" fill="#e8b45c"/>
+  <g stroke="#b5762f" stroke-opacity=".55" stroke-width="2.5">
+    <line x1="150" y1="254" x2="278" y2="254"/>
+    <line x1="182" y1="199" x2="246" y2="309"/>
+    <line x1="246" y1="199" x2="182" y2="309"/>
+  </g>
+  <g fill="#c05a4a" stroke="#93412f" stroke-width="2">
+    <circle cx="240" cy="226" r="7.5"/>
+    <circle cx="186" cy="224" r="7.5"/>
+    <circle cx="160" cy="262" r="7.5"/>
+    <circle cx="214" cy="286" r="7.5"/>
+    <circle cx="252" cy="270" r="7.5"/>
+  </g>
+  <g fill="#5e9b52">
+    <circle cx="226" cy="240" r="4"/>
+    <circle cx="176" cy="248" r="4"/>
+    <circle cx="234" cy="292" r="4"/>
+  </g>
+  <text x="214" y="456" font-size="11" fill="#ece7dd" opacity=".5" text-anchor="middle">photo_0231.jpg — entrée du modèle</text>
+
+  <!-- prédictions -->
+  <text x="416" y="132" font-size="12" letter-spacing="3" fill="#c9a0dc" opacity=".95">PRÉDICTIONS</text>
+
+  <text x="416" y="170" font-size="15" fill="#ece7dd">Pizza</text>
+  <text x="756" y="170" font-size="15" font-weight="700" fill="#ece7dd" text-anchor="end">92 %</text>
+  <rect x="416" y="184" width="340" height="12" rx="6" fill="#ece7dd" fill-opacity=".08"/>
+  <rect x="416" y="184" width="313" height="12" rx="6" fill="url(#bar)"/>
+
+  <text x="416" y="240" font-size="15" fill="#ece7dd" opacity=".8">Sushi</text>
+  <text x="756" y="240" font-size="15" fill="#ece7dd" opacity=".7" text-anchor="end">5 %</text>
+  <rect x="416" y="254" width="340" height="12" rx="6" fill="#ece7dd" fill-opacity=".08"/>
+  <rect x="416" y="254" width="17" height="12" rx="6" fill="#c9a0dc" opacity=".45"/>
+
+  <text x="416" y="310" font-size="15" fill="#ece7dd" opacity=".8">Burger</text>
+  <text x="756" y="310" font-size="15" fill="#ece7dd" opacity=".7" text-anchor="end">3 %</text>
+  <rect x="416" y="324" width="340" height="12" rx="6" fill="#ece7dd" fill-opacity=".08"/>
+  <rect x="416" y="324" width="10" height="12" rx="5" fill="#c9a0dc" opacity=".35"/>
+
+  <!-- top-1 -->
+  <rect x="416" y="362" width="222" height="32" rx="16" fill="#7dc9a1" fill-opacity=".1" stroke="#7dc9a1" stroke-opacity=".6"/>
+  <text x="527" y="382" font-size="12" letter-spacing="1.5" fill="#a9dfc3" text-anchor="middle">TOP-1 · PIZZA · 92 %</text>
+
+  <text x="416" y="424" font-size="11.5" fill="#ece7dd" opacity=".55">EfficientNet-B2 · 101 classes · précision 92 %</text>
+</svg>

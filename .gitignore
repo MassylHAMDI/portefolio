@@ -1,0 +1,7 @@
+# Claude Code (config locale)
+.claude/
+
+# Fichiers temporaires
+_preview_tmp.html
+Thumbs.db
+Desktop.ini
