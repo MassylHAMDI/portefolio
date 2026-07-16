@@ -2,8 +2,13 @@
 
 AddDefaultCharset UTF-8
 
-# Redirection systématique vers HTTPS
 RewriteEngine On
+
+# www → domaine nu, directement en HTTPS (URL canonique unique pour le SEO)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Redirection systématique vers HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
