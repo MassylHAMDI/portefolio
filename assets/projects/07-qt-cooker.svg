@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="18%" cy="18%" r="85%">
+      <stop offset="0" stop-color="#355b80" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#355b80" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="82%" cy="88%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- fenêtre Qt -->
+  <rect x="24" y="22" width="752" height="456" rx="16" fill="#0e1020" stroke="#ece7dd" stroke-opacity=".13" stroke-width="1.5"/>
+  <circle cx="52" cy="43" r="5.5" fill="#e0655f"/>
+  <circle cx="72" cy="43" r="5.5" fill="#e5b458"/>
+  <circle cx="92" cy="43" r="5.5" fill="#67b26a"/>
+  <text x="400" y="47" font-size="12" letter-spacing="1" fill="#ece7dd" opacity=".55" text-anchor="middle">CookerControl — IHM embarquée</text>
+  <line x1="24" y1="60" x2="776" y2="60" stroke="#ece7dd" stroke-opacity=".1"/>
+
+  <!-- jauge de vitesse semi-circulaire (8 segments, 5 allumés) -->
+  <g stroke-width="26" fill="none" stroke-linecap="round">
+    <path d="M 96 330 A 150 150 0 0 1 118 251" stroke="#e8955c"/>
+    <path d="M 132 231 A 150 150 0 0 1 195 180" stroke="#e8955c"/>
+    <path d="M 218 170 A 150 150 0 0 1 298 156" stroke="#e8955c"/>
+    <path d="M 324 157 A 150 150 0 0 1 402 179" stroke="#e8955c"/>
+    <path d="M 424 190 A 150 150 0 0 1 480 249" stroke="#e8955c"/>
+    <path d="M 492 270 A 150 150 0 0 1 508 330" stroke="#ece7dd" stroke-opacity=".12"/>
+  </g>
+  <text x="302" y="300" font-size="88" font-weight="700" fill="#ece7dd" text-anchor="middle">5</text>
+  <text x="302" y="332" font-size="13" letter-spacing="3" fill="#e8955c" text-anchor="middle">VITESSE</text>
+
+  <!-- boutons + / - -->
+  <g>
+    <circle cx="222" cy="404" r="30" fill="#ece7dd" fill-opacity=".06" stroke="#ece7dd" stroke-opacity=".2"/>
+    <line x1="206" y1="404" x2="238" y2="404" stroke="#ece7dd" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="382" cy="404" r="30" fill="#e8955c" fill-opacity=".14" stroke="#e8955c" stroke-opacity=".65"/>
+    <line x1="366" y1="404" x2="398" y2="404" stroke="#f0c19e" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="382" y1="388" x2="382" y2="420" stroke="#f0c19e" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- panneau température / minuterie -->
+  <g>
+    <rect x="564" y="84" width="196" height="176" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="584" y="118" font-size="11.5" letter-spacing="3" fill="#e8955c" opacity=".95">CHAUFFAGE</text>
+    <text x="584" y="164" font-size="34" font-weight="700" fill="#ece7dd">120 °C</text>
+    <rect x="584" y="186" width="156" height="10" rx="5" fill="#ece7dd" fill-opacity=".08"/>
+    <rect x="584" y="186" width="104" height="10" rx="5" fill="#e8955c"/>
+    <text x="584" y="232" font-size="12.5" fill="#ece7dd" opacity=".7">Mijotage · palier 2/3</text>
+  </g>
+  <g>
+    <rect x="564" y="278" width="196" height="128" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="584" y="312" font-size="11.5" letter-spacing="3" fill="#e8955c" opacity=".95">MINUTERIE</text>
+    <text x="584" y="360" font-size="34" font-weight="700" fill="#ece7dd">12:30</text>
+    <text x="584" y="388" font-size="12.5" fill="#ece7dd" opacity=".7">Programme cuisson vapeur</text>
+  </g>
+
+  <!-- pastille techno -->
+  <rect x="564" y="424" width="122" height="26" rx="13" fill="#e8955c" fill-opacity=".1" stroke="#e8955c" stroke-opacity=".45"/>
+  <text x="625" y="441" font-size="11" letter-spacing="1" fill="#f0c19e" text-anchor="middle">C++ · Qt 6</text>
+</svg>

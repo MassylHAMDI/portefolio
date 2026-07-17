@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="22%" cy="82%" r="85%">
+      <stop offset="0" stop-color="#3f6f96" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#3f6f96" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="88%" cy="14%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur5" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- en-tête -->
+  <text x="44" y="60" font-size="21" font-weight="700" fill="#ece7dd">Cinématique inverse</text>
+  <g>
+    <rect x="560" y="34" width="200" height="30" rx="15" fill="#8fb8e8" fill-opacity=".1" stroke="#8fb8e8" stroke-opacity=".45"/>
+    <text x="660" y="53" font-size="11.5" letter-spacing="1.5" fill="#bcd6f2" text-anchor="middle">GRADIENT · NEWTON</text>
+  </g>
+
+  <!-- espace de travail du bras -->
+  <rect x="44" y="96" width="440" height="336" rx="16" fill="#ece7dd" fill-opacity=".05" stroke="#ece7dd" stroke-opacity=".12"/>
+  <!-- grille -->
+  <g stroke="#ece7dd" stroke-opacity=".07">
+    <line x1="44" y1="180" x2="484" y2="180"/>
+    <line x1="44" y1="264" x2="484" y2="264"/>
+    <line x1="44" y1="348" x2="484" y2="348"/>
+    <line x1="128" y1="96" x2="128" y2="432"/>
+    <line x1="212" y1="96" x2="212" y2="432"/>
+    <line x1="296" y1="96" x2="296" y2="432"/>
+    <line x1="380" y1="96" x2="380" y2="432"/>
+  </g>
+
+  <!-- itérations précédentes du bras (fantômes) -->
+  <g stroke="#ece7dd" stroke-opacity=".14" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M148 388 L262 344 L322 250"/>
+    <path d="M148 388 L276 322 L370 262"/>
+  </g>
+
+  <!-- bras 2 segments : position convergée -->
+  <path d="M148 388 L288 300 L398 200" stroke="#8fb8e8" stroke-width="18" stroke-linecap="round" fill="none" opacity=".28" filter="url(#blur5)"/>
+  <path d="M148 388 L288 300" stroke="#8fb8e8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M288 300 L398 200" stroke="#bcd6f2" stroke-width="10" stroke-linecap="round"/>
+  <!-- articulations -->
+  <circle cx="148" cy="388" r="15" fill="#0e1020" stroke="#8fb8e8" stroke-width="4"/>
+  <circle cx="288" cy="300" r="11" fill="#0e1020" stroke="#8fb8e8" stroke-width="4"/>
+  <circle cx="398" cy="200" r="8" fill="#bcd6f2"/>
+  <!-- angles -->
+  <path d="M 178 388 A 30 30 0 0 0 172 373" fill="none" stroke="#e8b84b" stroke-width="2.5"/>
+  <text x="196" y="380" font-size="12" fill="#e8b84b">θ₁</text>
+  <path d="M 288 270 A 30 30 0 0 1 310 280" fill="none" stroke="#e8b84b" stroke-width="2.5"/>
+  <text x="306" y="264" font-size="12" fill="#e8b84b">θ₂</text>
+
+  <!-- cible -->
+  <g stroke="#7dc9a1" stroke-width="3" stroke-linecap="round">
+    <line x1="398" y1="180" x2="398" y2="220"/>
+    <line x1="378" y1="200" x2="418" y2="200"/>
+  </g>
+  <circle cx="398" cy="200" r="20" fill="none" stroke="#7dc9a1" stroke-width="2" stroke-dasharray="4 6"/>
+  <text x="398" y="158" font-size="11" letter-spacing="1.5" fill="#a9dfc3" text-anchor="middle">CIBLE (x, y)</text>
+
+  <!-- panneau convergence -->
+  <g>
+    <rect x="524" y="96" width="236" height="336" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="544" y="130" font-size="11.5" letter-spacing="3" fill="#8fb8e8" opacity=".95">CONVERGENCE</text>
+    <!-- axes -->
+    <line x1="552" y1="152" x2="552" y2="296" stroke="#ece7dd" stroke-opacity=".25"/>
+    <line x1="552" y1="296" x2="736" y2="296" stroke="#ece7dd" stroke-opacity=".25"/>
+    <!-- descente de gradient -->
+    <path d="M556 162 L588 210 L620 248 L652 272 L684 286 L728 292" fill="none" stroke="#e8b84b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+    <!-- Newton (plus rapide) -->
+    <path d="M556 162 L596 262 L636 290 L728 294" fill="none" stroke="#8fb8e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="728" cy="294" r="5" fill="#8fb8e8"/>
+    <text x="552" y="322" font-size="11" fill="#e8b84b">— gradient à pas adaptatif</text>
+    <text x="552" y="342" font-size="11" fill="#8fb8e8">— méthode de Newton</text>
+    <line x1="544" y1="360" x2="740" y2="360" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="544" y="388" font-size="12.5" fill="#ece7dd" opacity=".7">‖r(θ)‖² → 10⁻⁶ en 6 itérations</text>
+    <text x="544" y="412" font-size="11" fill="#ece7dd" opacity=".5">Gradient, hessienne et trajectoire</text>
+  </g>
+</svg>

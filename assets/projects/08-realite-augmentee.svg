@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="82%" cy="22%" r="85%">
+      <stop offset="0" stop-color="#4d3f66" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#4d3f66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="18%" cy="82%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur4" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- cadre vidéo -->
+  <rect x="24" y="22" width="752" height="456" rx="16" fill="#0e1020" stroke="#ece7dd" stroke-opacity=".13" stroke-width="1.5"/>
+  <circle cx="52" cy="46" r="6" fill="#e0655f"/>
+  <text x="66" y="50" font-size="11" letter-spacing="2" fill="#ece7dd" opacity=".6">REC · SCÈNE VIDÉO</text>
+  <text x="748" y="50" font-size="11" letter-spacing="1" fill="#ece7dd" opacity=".5" text-anchor="end">30 i/s</text>
+
+  <!-- damier de calibration en perspective -->
+  <g fill="#ece7dd" fill-opacity=".14">
+    <polygon points="180,392 260,392 246,362 174,362"/>
+    <polygon points="340,392 420,392 390,362 318,362"/>
+    <polygon points="246,362 318,362 296,336 234,336"/>
+    <polygon points="390,362 462,362 420,336 358,336"/>
+    <polygon points="234,336 296,336 282,314 228,314"/>
+    <polygon points="358,336 420,336 392,314 336,314"/>
+  </g>
+  <g stroke="#ece7dd" stroke-opacity=".22" fill="none">
+    <polygon points="100,392 500,392 440,314 220,314"/>
+    <line x1="180" y1="392" x2="274" y2="314"/>
+    <line x1="260" y1="392" x2="330" y2="314"/>
+    <line x1="340" y1="392" x2="384" y2="314"/>
+    <line x1="420" y1="392" x2="440" y2="314"/>
+    <line x1="174" y1="362" x2="462" y2="362"/>
+    <line x1="228" y1="336" x2="420" y2="336"/>
+  </g>
+
+  <!-- cube 3D incrusté -->
+  <g filter="url(#blur4)" opacity=".4" stroke="#b591e0" stroke-width="8" fill="none" stroke-linejoin="round">
+    <polygon points="268,344 384,344 356,296 252,296"/>
+  </g>
+  <g stroke="#c9a0e8" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <polygon points="268,344 384,344 356,296 252,296" fill="#c9a0e8" fill-opacity=".1"/>
+    <polygon points="268,224 384,224 356,192 252,192" fill="#c9a0e8" fill-opacity=".18"/>
+    <line x1="268" y1="344" x2="268" y2="224"/>
+    <line x1="384" y1="344" x2="384" y2="224"/>
+    <line x1="356" y1="296" x2="356" y2="192"/>
+    <line x1="252" y1="296" x2="252" y2="192"/>
+  </g>
+
+  <!-- repère caméra (axes) -->
+  <g stroke-width="3.5" stroke-linecap="round">
+    <line x1="268" y1="344" x2="322" y2="368" stroke="#e0655f"/>
+    <line x1="268" y1="344" x2="212" y2="360" stroke="#67b26a"/>
+    <line x1="268" y1="344" x2="268" y2="288" stroke="#5f8fd0"/>
+  </g>
+  <text x="332" y="376" font-size="11" fill="#e0655f">x</text>
+  <text x="198" y="368" font-size="11" fill="#67b26a">y</text>
+  <text x="276" y="286" font-size="11" fill="#5f8fd0">z</text>
+
+  <!-- points d'intérêt suivis -->
+  <g stroke="#7dc9a1" stroke-width="2" opacity=".9">
+    <path d="M136 148 h12 M142 142 v12"/>
+    <path d="M470 122 h12 M476 116 v12"/>
+    <path d="M520 236 h12 M526 230 v12"/>
+    <path d="M120 268 h12 M126 262 v12"/>
+    <path d="M448 428 h12 M454 422 v12"/>
+    <path d="M162 430 h12 M168 424 v12"/>
+  </g>
+
+  <!-- panneau pipeline -->
+  <g>
+    <rect x="564" y="84" width="196" height="300" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="584" y="118" font-size="11.5" letter-spacing="3" fill="#c9a0e8" opacity=".95">PIPELINE</text>
+    <g font-size="12.5" fill="#ece7dd">
+      <text x="606" y="156" opacity=".85">Calibration caméra</text>
+      <text x="606" y="192" opacity=".85">Homographie</text>
+      <text x="606" y="228" opacity=".85">Estimation de pose</text>
+      <text x="606" y="264" opacity=".85">Suivi de points</text>
+      <text x="606" y="300" opacity=".85">Projection 3D</text>
+    </g>
+    <g fill="#7dc9a1">
+      <circle cx="592" cy="152" r="4"/>
+      <circle cx="592" cy="188" r="4"/>
+      <circle cx="592" cy="224" r="4"/>
+      <circle cx="592" cy="260" r="4"/>
+    </g>
+    <circle cx="592" cy="296" r="4" fill="#c9a0e8"/>
+    <line x1="592" y1="158" x2="592" y2="290" stroke="#ece7dd" stroke-opacity=".15"/>
+    <text x="584" y="344" font-size="11" fill="#ece7dd" opacity=".5">Matrice de projection</text>
+    <text x="584" y="362" font-size="11" fill="#ece7dd" opacity=".5">estimée image par image.</text>
+  </g>
+
+  <!-- pastille techno -->
+  <rect x="564" y="404" width="196" height="26" rx="13" fill="#c9a0e8" fill-opacity=".1" stroke="#c9a0e8" stroke-opacity=".45"/>
+  <text x="662" y="421" font-size="11" letter-spacing="1" fill="#dcc2ea" text-anchor="middle">MATLAB · Vision 3D</text>
+</svg>

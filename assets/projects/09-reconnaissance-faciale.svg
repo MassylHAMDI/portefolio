@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="50%" cy="12%" r="85%">
+      <stop offset="0" stop-color="#2c6a63" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2c6a63" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="22%" cy="88%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- en-tête -->
+  <text x="44" y="60" font-size="21" font-weight="700" fill="#ece7dd">Biométrie faciale</text>
+  <g>
+    <rect x="560" y="34" width="200" height="30" rx="15" fill="#7dc9a1" fill-opacity=".1" stroke="#7dc9a1" stroke-opacity=".45"/>
+    <text x="660" y="53" font-size="11.5" letter-spacing="1.5" fill="#a9dfc3" text-anchor="middle">GAN · LANDMARKS</text>
+  </g>
+
+  <!-- visage : maillage de landmarks -->
+  <rect x="44" y="96" width="330" height="336" rx="16" fill="#ece7dd" fill-opacity=".05" stroke="#ece7dd" stroke-opacity=".12"/>
+  <text x="209" y="128" font-size="11" letter-spacing="2" fill="#7dc9a1" text-anchor="middle">ALIGNEMENT · 68 POINTS</text>
+  <!-- contour du visage -->
+  <g fill="none" stroke="#ece7dd" stroke-opacity=".35" stroke-width="1.5">
+    <path d="M129 208 Q131 300 165 342 Q195 378 209 378 Q223 378 253 342 Q287 300 289 208"/>
+    <path d="M145 192 Q162 178 186 186"/>
+    <path d="M232 186 Q256 178 273 192"/>
+    <path d="M205 200 Q209 238 197 252 L221 252"/>
+    <path d="M172 288 Q209 312 246 288 Q228 306 209 306 Q190 306 172 288"/>
+    <ellipse cx="172" cy="212" rx="17" ry="9"/>
+    <ellipse cx="246" cy="212" rx="17" ry="9"/>
+  </g>
+  <!-- landmarks -->
+  <g fill="#7dc9a1">
+    <circle cx="129" cy="208" r="3.4"/><circle cx="131" cy="252" r="3.4"/><circle cx="139" cy="300" r="3.4"/>
+    <circle cx="165" cy="342" r="3.4"/><circle cx="209" cy="378" r="3.4"/><circle cx="253" cy="342" r="3.4"/>
+    <circle cx="279" cy="300" r="3.4"/><circle cx="287" cy="252" r="3.4"/><circle cx="289" cy="208" r="3.4"/>
+    <circle cx="155" cy="212" r="3.4"/><circle cx="189" cy="212" r="3.4"/><circle cx="229" cy="212" r="3.4"/><circle cx="263" cy="212" r="3.4"/>
+    <circle cx="197" cy="252" r="3.4"/><circle cx="221" cy="252" r="3.4"/>
+    <circle cx="172" cy="288" r="3.4"/><circle cx="209" cy="296" r="3.4"/><circle cx="246" cy="288" r="3.4"/>
+    <circle cx="162" cy="184" r="3.4"/><circle cx="256" cy="184" r="3.4"/>
+  </g>
+  <!-- lignes d'alignement -->
+  <line x1="209" y1="148" x2="209" y2="400" stroke="#7dc9a1" stroke-opacity=".3" stroke-dasharray="3 6"/>
+  <line x1="70" y1="212" x2="348" y2="212" stroke="#7dc9a1" stroke-opacity=".3" stroke-dasharray="3 6"/>
+
+  <!-- panneau attaque adverse -->
+  <g>
+    <rect x="416" y="96" width="344" height="150" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="436" y="128" font-size="11.5" letter-spacing="3" fill="#e0857c" opacity=".95">ATTAQUE ADVERSE</text>
+    <!-- image + bruit = adversaire -->
+    <rect x="436" y="146" width="70" height="70" rx="8" fill="#2c6a63" fill-opacity=".5" stroke="#ece7dd" stroke-opacity=".2"/>
+    <text x="521" y="188" font-size="18" fill="#ece7dd" opacity=".7" text-anchor="middle">+</text>
+    <g>
+      <rect x="536" y="146" width="70" height="70" rx="8" fill="#ece7dd" fill-opacity=".04" stroke="#ece7dd" stroke-opacity=".2"/>
+      <g fill="#e0857c" opacity=".8">
+        <circle cx="552" cy="162" r="1.8"/><circle cx="574" cy="156" r="1.8"/><circle cx="590" cy="172" r="1.8"/>
+        <circle cx="548" cy="188" r="1.8"/><circle cx="568" cy="180" r="1.8"/><circle cx="588" cy="198" r="1.8"/>
+        <circle cx="556" cy="204" r="1.8"/><circle cx="578" cy="206" r="1.8"/>
+      </g>
+    </g>
+    <text x="621" y="188" font-size="18" fill="#ece7dd" opacity=".7" text-anchor="middle">=</text>
+    <rect x="636" y="146" width="70" height="70" rx="8" fill="#e0857c" fill-opacity=".14" stroke="#e0857c" stroke-opacity=".5"/>
+    <text x="671" y="236" font-size="10.5" fill="#e0857c" text-anchor="middle">identité trompée</text>
+  </g>
+
+  <!-- panneau scores -->
+  <g>
+    <rect x="416" y="266" width="344" height="166" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="436" y="298" font-size="11.5" letter-spacing="3" fill="#7dc9a1" opacity=".95">SCORE DE SIMILARITÉ</text>
+    <text x="436" y="332" font-size="13" fill="#ece7dd">Image originale</text>
+    <text x="740" y="332" font-size="13" font-weight="700" fill="#ece7dd" text-anchor="end">0,94</text>
+    <rect x="436" y="344" width="304" height="10" rx="5" fill="#ece7dd" fill-opacity=".08"/>
+    <rect x="436" y="344" width="286" height="10" rx="5" fill="#7dc9a1"/>
+    <text x="436" y="386" font-size="13" fill="#ece7dd" opacity=".85">Après perturbation</text>
+    <text x="740" y="386" font-size="13" font-weight="700" fill="#e0857c" text-anchor="end">0,18</text>
+    <rect x="436" y="398" width="304" height="10" rx="5" fill="#ece7dd" fill-opacity=".08"/>
+    <rect x="436" y="398" width="55" height="10" rx="5" fill="#e0857c"/>
+  </g>
+
+  <text x="209" y="456" font-size="11" fill="#ece7dd" opacity=".5" text-anchor="middle">Module Biométrie — Sorbonne Université</text>
+</svg>
