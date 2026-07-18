@@ -352,7 +352,7 @@ setTimeout(() => {
       : '<div class="mini">' +
           '<div class="mini-nav"><b>ME CONTACTER</b><span>GitHub · LinkedIn</span></div>' +
           '<div class="mini-title">' + title + '</div>' +
-          '<div class="mini-foot"><span>Ingénieur C/C++, disponible immédiatement.</span><span>Embarqué &amp; vision.</span></div>' +
+          '<div class="mini-foot"><span>Ingénieur Python, disponible immédiatement.</span><span>Vision &amp; embarqué.</span></div>' +
         '</div>';
 
     const laptop = document.createElement('div');

@@ -1,4 +1,4 @@
-# Portfolio — Massyl Yanis Hamdi, Ingénieur C/C++
+# Portfolio — Massyl Yanis Hamdi, Ingénieur Python & Vision par ordinateur
 
 Portfolio one-page à thème aquatique : intro animée, canvas d'ondes réactif au curseur,
 cartes projets empilées avec ordinateurs 3D interactifs, thème sombre/clair.
@@ -26,8 +26,8 @@ python3 -m http.server 8000
 
 ## Contenu
 
-Le contenu est basé sur le CV de Massyl Yanis Hamdi (ingénieur C/C++ — systèmes embarqués,
-robotique, vision par ordinateur) : à propos, stack, projets, parcours (expériences + formation)
+Le contenu est basé sur le CV de Massyl Yanis Hamdi (ingénieur Python — vision par ordinateur,
+deep learning, C++ embarqué et robotique) : à propos, stack, projets, parcours (expériences + formation)
 et contact (email, téléphone, LinkedIn, GitHub).
 
 - **Couleurs** : variables CSS dans `:root` et `[data-theme="light"]` en tête de `style.css`
