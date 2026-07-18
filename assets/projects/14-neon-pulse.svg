@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="82%" cy="22%" r="85%">
+      <stop offset="0" stop-color="#4d3f66" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#4d3f66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="18%" cy="82%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- cadre de jeu -->
+  <rect x="24" y="22" width="540" height="456" rx="16" fill="#0e1020" stroke="#ece7dd" stroke-opacity=".13" stroke-width="1.5"/>
+  <text x="44" y="52" font-size="12" letter-spacing="2" fill="#d383b6">SCORE 12 480</text>
+  <text x="544" y="52" font-size="12" letter-spacing="2" fill="#ece7dd" opacity=".6" text-anchor="end">NIVEAU 3 · ❤❤❤</text>
+  <line x1="24" y1="64" x2="564" y2="64" stroke="#ece7dd" stroke-opacity=".1"/>
+
+  <!-- briques néon -->
+  <g rx="6">
+    <g filter="url(#glow)" opacity=".5">
+      <rect x="56" y="88" width="88" height="26" rx="6" fill="#d383b6"/>
+      <rect x="452" y="88" width="88" height="26" rx="6" fill="#8fb8e8"/>
+    </g>
+    <rect x="56" y="88" width="88" height="26" rx="6" fill="#d383b6"/>
+    <rect x="155" y="88" width="88" height="26" rx="6" fill="#c9a0e8"/>
+    <rect x="254" y="88" width="88" height="26" rx="6" fill="#8fb8e8"/>
+    <rect x="353" y="88" width="88" height="26" rx="6" fill="#7dc9a1"/>
+    <rect x="452" y="88" width="88" height="26" rx="6" fill="#8fb8e8"/>
+    <rect x="56" y="126" width="88" height="26" rx="6" fill="#c9a0e8" opacity=".85"/>
+    <rect x="155" y="126" width="88" height="26" rx="6" fill="#8fb8e8" opacity=".85"/>
+    <rect x="353" y="126" width="88" height="26" rx="6" fill="#d383b6" opacity=".85"/>
+    <rect x="452" y="126" width="88" height="26" rx="6" fill="#7dc9a1" opacity=".85"/>
+    <rect x="56" y="164" width="88" height="26" rx="6" fill="#7dc9a1" opacity=".65"/>
+    <rect x="254" y="164" width="88" height="26" rx="6" fill="#c9a0e8" opacity=".65"/>
+    <rect x="452" y="164" width="88" height="26" rx="6" fill="#d383b6" opacity=".65"/>
+  </g>
+  <!-- brique qui explose -->
+  <g stroke="#d383b6" stroke-width="2.5" stroke-linecap="round" opacity=".9">
+    <line x1="196" y1="172" x2="184" y2="160"/>
+    <line x1="210" y1="168" x2="214" y2="152"/>
+    <line x1="222" y1="180" x2="236" y2="172"/>
+    <line x1="204" y1="188" x2="196" y2="200"/>
+  </g>
+
+  <!-- balle + trainée -->
+  <circle cx="238" cy="252" r="16" fill="#d383b6" filter="url(#glow)" opacity=".7"/>
+  <circle cx="238" cy="252" r="9" fill="#f4d7e8"/>
+  <g fill="#d383b6">
+    <circle cx="262" cy="290" r="6" opacity=".5"/>
+    <circle cx="284" cy="326" r="4.5" opacity=".3"/>
+    <circle cx="303" cy="358" r="3.5" opacity=".18"/>
+  </g>
+
+  <!-- raquette -->
+  <rect x="252" y="404" width="132" height="18" rx="9" fill="#c9a0e8" filter="url(#glow)" opacity=".55"/>
+  <rect x="252" y="404" width="132" height="18" rx="9" fill="#c9a0e8"/>
+  <rect x="266" y="408" width="52" height="4" rx="2" fill="#f4effa" opacity=".7"/>
+
+  <!-- panneau états de jeu -->
+  <g>
+    <rect x="588" y="84" width="188" height="270" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="608" y="118" font-size="11.5" letter-spacing="3" fill="#d383b6" opacity=".95">ÉTATS DE JEU</text>
+    <g font-size="12.5" fill="#ece7dd">
+      <text x="630" y="156" opacity=".85">Menu animé</text>
+      <text x="630" y="192" opacity=".85">Partie / pause</text>
+      <text x="630" y="228" opacity=".85">Victoire · niveaux</text>
+      <text x="630" y="264" opacity=".85">Game over</text>
+      <text x="630" y="300" opacity=".85">Meilleurs scores</text>
+    </g>
+    <g fill="#d383b6">
+      <circle cx="616" cy="152" r="4"/>
+      <circle cx="616" cy="188" r="4"/>
+      <circle cx="616" cy="224" r="4"/>
+      <circle cx="616" cy="260" r="4"/>
+      <circle cx="616" cy="296" r="4"/>
+    </g>
+    <line x1="616" y1="158" x2="616" y2="290" stroke="#ece7dd" stroke-opacity=".15"/>
+    <text x="608" y="334" font-size="11" fill="#ece7dd" opacity=".5">Sons : raquette, brique, mur</text>
+  </g>
+
+  <!-- pastille techno -->
+  <rect x="588" y="378" width="172" height="26" rx="13" fill="#d383b6" fill-opacity=".1" stroke="#d383b6" stroke-opacity=".45"/>
+  <text x="674" y="395" font-size="11" letter-spacing="1" fill="#ecc0da" text-anchor="middle">Python · Pygame</text>
+</svg>
