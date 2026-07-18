@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="50%" cy="12%" r="85%">
+      <stop offset="0" stop-color="#2c6a63" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2c6a63" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="22%" cy="88%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- scène de suivi -->
+  <rect x="24" y="22" width="510" height="456" rx="16" fill="#0e1020" stroke="#ece7dd" stroke-opacity=".13" stroke-width="1.5"/>
+  <text x="44" y="52" font-size="11" letter-spacing="2" fill="#ece7dd" opacity=".6">SUIVI — image 214/400</text>
+  <line x1="24" y1="64" x2="534" y2="64" stroke="#ece7dd" stroke-opacity=".1"/>
+
+  <!-- barre d'occultation -->
+  <rect x="300" y="64" width="64" height="414" fill="#2a2333"/>
+
+  <!-- piste 1 : visible, trajectoire -->
+  <path d="M70 150 Q130 175 180 200 T264 244" fill="none" stroke="#7dc9a1" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+  <circle cx="264" cy="244" r="15" fill="#7dc9a1"/>
+  <circle cx="264" cy="244" r="23" fill="none" stroke="#7dc9a1" stroke-width="2.5"/>
+  <path d="M256 244 h16 M264 236 v16" stroke="#0e1020" stroke-width="2"/>
+  <text x="240" y="208" font-size="14" font-weight="700" fill="#7dc9a1">#2</text>
+
+  <!-- piste 2 : occultée, prédiction en pointillé -->
+  <path d="M180 372 Q230 356 276 342 T330 322" fill="none" stroke="#8fb8e8" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+  <circle cx="330" cy="322" r="22" fill="none" stroke="#8fb8e8" stroke-width="2.5" stroke-dasharray="5 6"/>
+  <text x="306" y="288" font-size="14" font-weight="700" fill="#8fb8e8">#4</text>
+  <text x="352" y="316" font-size="11" fill="#8fb8e8" opacity=".9">pred</text>
+
+  <!-- piste 3 : ressortie de l'occultation, identité conservée -->
+  <path d="M330 128 Q390 140 434 158 T496 190" fill="none" stroke="#e8b84b" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+  <circle cx="496" cy="190" r="14" fill="#e8b84b"/>
+  <circle cx="496" cy="190" r="22" fill="none" stroke="#e8b84b" stroke-width="2.5"/>
+  <path d="M488 190 h16 M496 182 v16" stroke="#0e1020" stroke-width="2"/>
+  <text x="472" y="154" font-size="14" font-weight="700" fill="#e8b84b">#3</text>
+
+  <!-- détections (croix) -->
+  <g stroke="#ece7dd" stroke-width="1.6" opacity=".7">
+    <path d="M262 240 h6 M265 237 v6" transform="translate(-2,2)"/>
+    <path d="M490 186 h6 M493 183 v6"/>
+    <path d="M120 420 h8 M124 416 v8"/>
+  </g>
+
+  <text x="332" y="452" font-size="10.5" fill="#ece7dd" opacity=".5" text-anchor="middle">occultation :</text>
+  <text x="332" y="468" font-size="10.5" fill="#ece7dd" opacity=".5" text-anchor="middle">le filtre prédit</text>
+
+  <!-- panneau algorithme -->
+  <g>
+    <rect x="558" y="22" width="218" height="330" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="578" y="56" font-size="11.5" letter-spacing="3" fill="#7dc9a1" opacity=".95">CHAQUE IMAGE</text>
+    <g font-size="12.5" fill="#ece7dd">
+      <text x="600" y="94" opacity=".85">Prédiction Kalman</text>
+      <text x="600" y="134" opacity=".85">Association hongroise</text>
+      <text x="600" y="174" opacity=".85">Gating Mahalanobis</text>
+      <text x="600" y="214" opacity=".85">Mise à jour (gain K)</text>
+      <text x="600" y="254" opacity=".85">Naissance / mort</text>
+    </g>
+    <g fill="#7dc9a1">
+      <circle cx="586" cy="90" r="4"/>
+      <circle cx="586" cy="130" r="4"/>
+      <circle cx="586" cy="170" r="4"/>
+      <circle cx="586" cy="210" r="4"/>
+      <circle cx="586" cy="250" r="4"/>
+    </g>
+    <line x1="586" y1="96" x2="586" y2="244" stroke="#ece7dd" stroke-opacity=".15"/>
+    <line x1="578" y1="278" x2="756" y2="278" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="578" y="304" font-size="11" fill="#ece7dd" opacity=".55">x̂ₖ⁻ = F x̂ₖ₋₁</text>
+    <text x="578" y="324" font-size="11" fill="#ece7dd" opacity=".55">P̂ₖ⁻ = F Pₖ₋₁ Fᵀ + Q</text>
+  </g>
+
+  <!-- pastilles -->
+  <rect x="558" y="376" width="218" height="26" rx="13" fill="#7dc9a1" fill-opacity=".1" stroke="#7dc9a1" stroke-opacity=".45"/>
+  <text x="667" y="393" font-size="11" letter-spacing="1" fill="#a9dfc3" text-anchor="middle">Kalman from scratch</text>
+  <rect x="558" y="412" width="160" height="26" rx="13" fill="#ece7dd" fill-opacity=".05" stroke="#ece7dd" stroke-opacity=".2"/>
+  <text x="638" y="429" font-size="11" letter-spacing="1" fill="#ece7dd" opacity=".8" text-anchor="middle">Python · NumPy</text>
+</svg>

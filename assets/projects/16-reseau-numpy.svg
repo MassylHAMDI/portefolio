@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="ga" cx="82%" cy="82%" r="85%">
+      <stop offset="0" stop-color="#6b4f3a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#6b4f3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gb" cx="14%" cy="22%" r="80%">
+      <stop offset="0" stop-color="#1c1d33" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1c1d33" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#0a0b15"/>
+  <rect width="800" height="500" fill="url(#gb)"/>
+  <rect width="800" height="500" fill="url(#ga)"/>
+
+  <!-- en-tête -->
+  <text x="44" y="60" font-size="21" font-weight="700" fill="#ece7dd">Réseau de neurones — NumPy pur</text>
+  <g>
+    <rect x="586" y="34" width="174" height="30" rx="15" fill="#e8b84b" fill-opacity=".1" stroke="#e8b84b" stroke-opacity=".45"/>
+    <text x="673" y="53" font-size="11.5" letter-spacing="1.5" fill="#f0d391" text-anchor="middle">SANS FRAMEWORK</text>
+  </g>
+
+  <!-- réseau : 4 couches -->
+  <g stroke="#ece7dd" stroke-opacity=".14">
+    <!-- connexions 784->128 -->
+    <g>
+      <line x1="112" y1="130" x2="240" y2="150"/><line x1="112" y1="130" x2="240" y2="210"/><line x1="112" y1="130" x2="240" y2="270"/>
+      <line x1="112" y1="200" x2="240" y2="150"/><line x1="112" y1="200" x2="240" y2="210"/><line x1="112" y1="200" x2="240" y2="330"/>
+      <line x1="112" y1="270" x2="240" y2="210"/><line x1="112" y1="270" x2="240" y2="270"/><line x1="112" y1="270" x2="240" y2="330"/>
+      <line x1="112" y1="340" x2="240" y2="270"/><line x1="112" y1="340" x2="240" y2="330"/><line x1="112" y1="340" x2="240" y2="150"/>
+    </g>
+    <g>
+      <line x1="240" y1="150" x2="368" y2="180"/><line x1="240" y1="150" x2="368" y2="250"/><line x1="240" y1="210" x2="368" y2="180"/>
+      <line x1="240" y1="210" x2="368" y2="320"/><line x1="240" y1="270" x2="368" y2="250"/><line x1="240" y1="270" x2="368" y2="180"/>
+      <line x1="240" y1="330" x2="368" y2="320"/><line x1="240" y1="330" x2="368" y2="250"/>
+    </g>
+    <g>
+      <line x1="368" y1="180" x2="480" y2="210"/><line x1="368" y1="180" x2="480" y2="280"/><line x1="368" y1="250" x2="480" y2="210"/>
+      <line x1="368" y1="250" x2="480" y2="280"/><line x1="368" y1="320" x2="480" y2="280"/><line x1="368" y1="320" x2="480" y2="210"/>
+    </g>
+  </g>
+  <!-- neurones -->
+  <g fill="#0e1020" stroke="#e8b84b" stroke-width="2.5">
+    <circle cx="112" cy="130" r="15"/><circle cx="112" cy="200" r="15"/><circle cx="112" cy="270" r="15"/><circle cx="112" cy="340" r="15"/>
+  </g>
+  <g fill="#0e1020" stroke="#e8955c" stroke-width="2.5">
+    <circle cx="240" cy="150" r="15"/><circle cx="240" cy="210" r="15"/><circle cx="240" cy="270" r="15"/><circle cx="240" cy="330" r="15"/>
+  </g>
+  <g fill="#0e1020" stroke="#e8955c" stroke-width="2.5">
+    <circle cx="368" cy="180" r="15"/><circle cx="368" cy="250" r="15"/><circle cx="368" cy="320" r="15"/>
+  </g>
+  <g fill="#0e1020" stroke="#7dc9a1" stroke-width="2.5">
+    <circle cx="480" cy="210" r="15"/><circle cx="480" cy="280" r="15"/>
+  </g>
+  <!-- flèche rétropropagation -->
+  <path d="M470 392 L130 392" stroke="#e8b84b" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 7"/>
+  <path d="M142 384 L128 392 L142 400" fill="none" stroke="#e8b84b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="380" font-size="11.5" letter-spacing="2" fill="#f0d391" text-anchor="middle">RÉTROPROPAGATION ∂L/∂W À LA MAIN</text>
+
+  <!-- étiquettes de couches -->
+  <g font-size="10.5" fill="#ece7dd" opacity=".55" text-anchor="middle">
+    <text x="112" y="428">784</text>
+    <text x="240" y="428">128 · ReLU</text>
+    <text x="368" y="428">64 · ReLU</text>
+    <text x="480" y="428">10 · Softmax</text>
+  </g>
+
+  <!-- panneau résultats -->
+  <g>
+    <rect x="556" y="96" width="204" height="280" rx="14" fill="#ece7dd" fill-opacity=".045" stroke="#ece7dd" stroke-opacity=".12"/>
+    <text x="576" y="130" font-size="11.5" letter-spacing="3" fill="#e8b84b" opacity=".95">MNIST · TEST</text>
+    <text x="576" y="176" font-size="36" font-weight="700" fill="#ece7dd">97,7 %</text>
+    <text x="576" y="200" font-size="11.5" fill="#ece7dd" opacity=".6">en 10 s sur CPU</text>
+    <line x1="576" y1="220" x2="740" y2="220" stroke="#ece7dd" stroke-opacity=".12"/>
+    <!-- courbe de perte -->
+    <text x="576" y="246" font-size="10.5" letter-spacing="2" fill="#e8b84b" opacity=".8">PERTE</text>
+    <polyline points="576,262 596,290 616,306 640,316 668,322 700,326 736,328" fill="none" stroke="#e8955c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="576" y1="332" x2="740" y2="332" stroke="#ece7dd" stroke-opacity=".2"/>
+    <text x="576" y="360" font-size="11" fill="#ece7dd" opacity=".55">Adam · init. de He · ~109 k</text>
+  </g>
+
+  <!-- pastille techno -->
+  <rect x="556" y="400" width="204" height="26" rx="13" fill="#e8b84b" fill-opacity=".1" stroke="#e8b84b" stroke-opacity=".45"/>
+  <text x="658" y="417" font-size="11" letter-spacing="1" fill="#f0d391" text-anchor="middle">NumPy · Backprop · Adam</text>
+</svg>
